@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fontplayfair: "Playfair", 'Courier New', Courier, monospace;
+    --fontraleway: "Raleway", 'sans-serif';
+    --fontlora: "Lora", 'Times New Roman', Times, serif;
+
+    --cor01: #E0E0E0;
+    --cor02: #F1E6D7;
+    --cor03: #A8D08D;
+    --cor04: #F7D76C;
+    --cor05: #F89D41;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+} 
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor02);
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 300px;
+    background: var(--cor02) url('../imagens/background-header.jpg') center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+header > section > h1 {
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    font-family: var(--fontplayfair);
+    font-size: 2em;
+    background-image: linear-gradient(to right, var(--cor04), var(--cor05));
+    background-clip: text;
+    color: transparent;
+    padding: 8px;
+}
+
+header > section > p {
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    font-family: var(--fontplayfair);
+    font-size: 1em;
+    color: var(--cor03);
+}
+
+header > section > a {
+    margin: 5px;
+    color: var(--cor05);
+    box-sizing: border-box;
+    position: relative;
+
+    left: 42%;
+    top: 180px;
+}
+
+header > section > a > span:hover {
+    text-shadow: 0px 0px 5px #E0E0E0;
+
+    transform: scale(1.3);
+    transition: text-shadow, transform .5s ease;
+}
+
+header > section > div {
+    color: var(--cor04);
+    padding: 5px;
+    position: absolute;
+
+    top: 10px;
+    left: 5px;
+}
+
+header > section > div#imenu {
+    display: none;
+    box-sizing: content-box;
+    top: 35px;
+    left: 0px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 6px;
+}
+
+header > section > div#imenu > a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--cor01);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+header > section > div#ibotao:hover {
+    cursor: pointer;
+    opacity: 65%;
+    transform: scale(1.2);
+    transition: opacity, transform .5s ease;
+}
+
+/* Fim da config do header */
+
+main > section {
+    padding: 10px;
+    margin-bottom: 30px;
+
+    position: relative;
+    
+    left: 50%;
+    transform: translate(-50%);
+} 
+
+main > section > h2 {
+    margin: 20px;
+    text-align: center;
+    font-family: var(--fontplayfair);
+    color: var(--cor03);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+main > section > article {
+    max-width: 35vw;
+    height: 360px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+
+    position: relative;
+    left: 8%;
+}
+
+main > section > article > p {
+    width: 30vw;
+    margin: 8px 0px 50px 0px;
+    text-align: center;
+    font-family: var(--fontraleway);
+    color: var(--cor04);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+
+    position: absolute;
+}
+
+main > section > article > p > strong {
+    width: 28vw;
+    height: 65px;
+    display: block;
+    margin-top: 50px;
+    padding: 6px;
+    background-color: var(--cor01);
+    border: 2px, solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+main > section > article > p > strong > span {
+    margin-top: 10px;
+}
+
+main > section > article > p > strong > span:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 5px #00000034;
+
+    transform: scale(1.3);
+    transition: text-shadow, transform .5s ease;
+}
+
+main > section > article > div {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main > section > article > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+main > section > aside > article > p, a{
+    margin: 10px;
+    text-align: center;
+}
+
+main > section > aside > article > a {
+    display: block;
+    text-decoration: none;
+    margin: 15px;
+    color: var(--cor05);
+    box-sizing: border-box;
+    position: relative;
+}
+
+main > section > aside > article > div, main > section > aside > article > div > img {
+    width: 60px;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20%;
+    columns: 2;
+}
+
+/* Fim da config do main */
+
+footer { 
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
